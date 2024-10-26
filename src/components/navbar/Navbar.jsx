@@ -18,6 +18,7 @@ const Navbar = () => {
 
     const { toggle, darkMode } = useContext(DarkModeContext);
     const { currentUser } = useContext(AuthContext);
+    console.log(currentUser)
 
     console.log(currentUser)
 
@@ -45,7 +46,7 @@ const Navbar = () => {
                 <NotificationsOutlinedIcon />
                 <div className="user">
                     <img
-                        src={currentUser.profilePic?.props.src}
+                        src={currentUser?.profilePic}
                         alt=""
                     />
                     <span>{currentUser.name}</span>

@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const AuthContext = createContext()
 
@@ -10,12 +11,19 @@ export const AuthContextProvider = ({ children }) => {
 
     const login = () => {
         // TO DO
+        // localStorage.setItem("user", JSON.stringify({
+        //     id: 1,
+        //     name: "John Doe",
+        //     profilePic:
+        //         "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600",
+        // }))
         setCurrentUser({
             id: 1,
             name: "John Doe",
             profilePic:
                 "https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600",
         });
+
     };
 
     useEffect(() => {
